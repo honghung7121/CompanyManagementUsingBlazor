@@ -1,0 +1,15 @@
+F:\Semester 5\PRN211\DapperTutorial\DataAccessObjects\bin\Debug\net6.0\DataAccessObjects.deps.json
+F:\Semester 5\PRN211\DapperTutorial\DataAccessObjects\bin\Debug\net6.0\DataAccessObjects.dll
+F:\Semester 5\PRN211\DapperTutorial\DataAccessObjects\bin\Debug\net6.0\DataAccessObjects.pdb
+F:\Semester 5\PRN211\DapperTutorial\DataAccessObjects\bin\Debug\net6.0\BusinessObjects.dll
+F:\Semester 5\PRN211\DapperTutorial\DataAccessObjects\bin\Debug\net6.0\BusinessObjects.pdb
+F:\Semester 5\PRN211\DapperTutorial\DataAccessObjects\obj\Debug\net6.0\DataAccessObjects.csproj.AssemblyReference.cache
+F:\Semester 5\PRN211\DapperTutorial\DataAccessObjects\obj\Debug\net6.0\DataAccessObjects.GeneratedMSBuildEditorConfig.editorconfig
+F:\Semester 5\PRN211\DapperTutorial\DataAccessObjects\obj\Debug\net6.0\DataAccessObjects.AssemblyInfoInputs.cache
+F:\Semester 5\PRN211\DapperTutorial\DataAccessObjects\obj\Debug\net6.0\DataAccessObjects.AssemblyInfo.cs
+F:\Semester 5\PRN211\DapperTutorial\DataAccessObjects\obj\Debug\net6.0\DataAccessObjects.csproj.CoreCompileInputs.cache
+F:\Semester 5\PRN211\DapperTutorial\DataAccessObjects\obj\Debug\net6.0\DataAccessObjects.csproj.CopyComplete
+F:\Semester 5\PRN211\DapperTutorial\DataAccessObjects\obj\Debug\net6.0\DataAccessObjects.dll
+F:\Semester 5\PRN211\DapperTutorial\DataAccessObjects\obj\Debug\net6.0\refint\DataAccessObjects.dll
+F:\Semester 5\PRN211\DapperTutorial\DataAccessObjects\obj\Debug\net6.0\DataAccessObjects.pdb
+F:\Semester 5\PRN211\DapperTutorial\DataAccessObjects\obj\Debug\net6.0\ref\DataAccessObjects.dll

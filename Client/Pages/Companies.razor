@@ -1,0 +1,67 @@
+﻿@page "/companies"
+@inject ICompanyService CompanyService
+@inject NavigationManager NavigationManager
+@using Client.Components
+
+@if (CompanyService.Companies.Count == 0)
+{
+    <LoadingIndicator></LoadingIndicator>
+}
+else
+{
+    <h3>Company</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var company in CompanyService.Companies)
+            {
+                <tr>
+                    <td>@company.Id</td>
+                    <td>@company.Name</td>
+                    <td>@company.Address</td>
+                    <td>@company.Country</td>
+                    <AuthorizeView Roles="Admin">
+                        <Authorized>
+                            <td>
+                                <button class="btn btn-primary"
+                                @onclick="(() => ShowCompany(company.Id))">
+                                    <i class="oi oi-pencil"></i>
+                                </button>
+                            </td>
+                        </Authorized>
+                    </AuthorizeView>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <AuthorizeView Roles="Admin">
+        <Authorized>
+            <button class="btn btn-primary"
+                @onclick="CreateNewCompany">
+                Create New Comapny
+            </button>
+        </Authorized>
+    </AuthorizeView>   
+}
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await CompanyService.GetCompanies();
+    }
+    void ShowCompany(int id)
+    {
+        NavigationManager.NavigateTo($"company/{id}");
+    }
+    void CreateNewCompany()
+    {
+        NavigationManager.NavigateTo("/company");
+    }
+}

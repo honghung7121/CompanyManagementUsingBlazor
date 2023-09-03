@@ -1,0 +1,12 @@
+F:\Semester 5\PRN211\DapperTutorial\BusinessObjects\bin\Debug\net6.0\BusinessObjects.deps.json
+F:\Semester 5\PRN211\DapperTutorial\BusinessObjects\bin\Debug\net6.0\BusinessObjects.dll
+F:\Semester 5\PRN211\DapperTutorial\BusinessObjects\bin\Debug\net6.0\BusinessObjects.pdb
+F:\Semester 5\PRN211\DapperTutorial\BusinessObjects\obj\Debug\net6.0\BusinessObjects.csproj.AssemblyReference.cache
+F:\Semester 5\PRN211\DapperTutorial\BusinessObjects\obj\Debug\net6.0\BusinessObjects.GeneratedMSBuildEditorConfig.editorconfig
+F:\Semester 5\PRN211\DapperTutorial\BusinessObjects\obj\Debug\net6.0\BusinessObjects.AssemblyInfoInputs.cache
+F:\Semester 5\PRN211\DapperTutorial\BusinessObjects\obj\Debug\net6.0\BusinessObjects.AssemblyInfo.cs
+F:\Semester 5\PRN211\DapperTutorial\BusinessObjects\obj\Debug\net6.0\BusinessObjects.csproj.CoreCompileInputs.cache
+F:\Semester 5\PRN211\DapperTutorial\BusinessObjects\obj\Debug\net6.0\BusinessObjects.dll
+F:\Semester 5\PRN211\DapperTutorial\BusinessObjects\obj\Debug\net6.0\refint\BusinessObjects.dll
+F:\Semester 5\PRN211\DapperTutorial\BusinessObjects\obj\Debug\net6.0\BusinessObjects.pdb
+F:\Semester 5\PRN211\DapperTutorial\BusinessObjects\obj\Debug\net6.0\ref\BusinessObjects.dll

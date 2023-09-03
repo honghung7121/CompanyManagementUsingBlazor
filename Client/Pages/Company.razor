@@ -1,0 +1,93 @@
+﻿@page "/company"
+@page "/company/{id:int}"
+@inject ICompanyService CompanyService
+@inject NavigationManager NavigationManager
+@inject IMapper Mapper
+@inject IToastService ToastService
+@using Client.Components
+
+
+@if(Id is null)
+{
+    <h3>Not Found</h3>
+}
+else
+{
+    <h3>@company.Id</h3><h3>@company.Name</h3>
+}
+<EditForm Model="company" OnValidSubmit="HandleSubmit">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <div>
+        <label for="name">Name</label>
+        <InputText id="name" @bind-Value="company.Name" class="form-control"></InputText>
+        <ValidationMessage For="() => company.Name"></ValidationMessage>
+    </div>
+    <div>
+        <label for="address">Address</label>
+        <InputText id="name" @bind-Value="company.Address" class="form-control"></InputText>
+    </div>
+    <div>
+        <label for="country">Country</label>
+        <InputText id="name" @bind-Value="company.Country" class="form-control"></InputText>
+    </div>
+    <button type="submit" class="btn btn-primary">@btnText</button>
+    <button type="button" class="btn btn-danger btn-sm" @onclick="(() => OpenDeleteDialog())">Delete</button>
+</EditForm>
+@if (DeleteDialogOpen)
+{
+    <ModalDialog Title="Confirmation" Content="Do you want to delete" OnClose="@OndeleteDialogClose"></ModalDialog>
+}
+
+
+@code {
+    [Parameter]
+    public int? Id {get; set;}
+    string btnText = string.Empty;
+    public bool DeleteDialogOpen{ get; set; }
+
+    private async void OndeleteDialogClose (bool accepted)
+    {
+        if (accepted)
+        {
+            await CompanyService.DeleteCompany((int)Id);
+        }
+        DeleteDialogOpen = false;
+        StateHasChanged();
+    }
+    private void OpenDeleteDialog()
+    {
+        DeleteDialogOpen = true;
+        StateHasChanged();
+    }
+    BusinessObjects.Company company = new BusinessObjects.Company { Name = "New Company" };
+
+    protected override void OnInitialized()
+    {
+        btnText = Id == null ? "Save Company" : "Update Product";
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id is not null)
+        {
+            var result = await CompanyService.GetComapyById((int)Id);
+            if (result is not null)
+                company = result;
+            else
+                NavigationManager.NavigateTo("/product");
+        }
+    }
+    async Task HandleSubmit()
+    {
+        if (Id is null)
+        {
+            await CompanyService.CreateCompany(Mapper.Map<BusinessObjects.Dto.CompanyDto>(company));
+            ToastService.ShowSuccess("The Company has been create successfully!");
+        }
+        else
+        {
+            await CompanyService.UpdateCompany((int)Id ,Mapper.Map<BusinessObjects.Dto.CompanyDto>(company));
+            ToastService.ShowSuccess("The Company has been update successfully!");
+        }
+    }
+}
